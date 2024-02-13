@@ -1,0 +1,10 @@
+Practical 3:
+
+A(__/__/__):
+    Write a class Employee
+B(__/__/__):
+    Write a class Student
+C(__/__/__):
+    Write a class Demo
+
+29/01/24- P_4_A: Write a program to demonstrate the use of friend function.

@@ -1,0 +1,34 @@
+Date: 
+Practical 1:
+    A -> Write a plsql block to print a string.
+    B -> Write a code in plsql to demonstrate the use of variable.
+    C -> Write a plsql code to accept two numbers from user and print its sum.
+
+Date:
+Practical 2:
+    A -> Write a plsql block to display the maximum number from the two numbers entered by the user.
+    B -> Write a plsql block to check whether the number is odd or even.
+    C -> Write a plsql block to check whether the number is positive or negative or zero.
+    D -> Write a plsql block to find  the greatest of the three numbers.
+    E -> Create a table Employee with the four column E_id (primary key), Salry ... and insert 3 values into the table
+    F -> Write a plsql block to update the salary of the employee with E_id = 1 if the salary is <= 2000.
+    G -> Write a plsql block to check whether a character is vowel or not.
+    H -> Write a plsql block to display the day of the week number entered by the user.
+
+Date:
+Practical 3:
+    A -> Write a plsql block to display the first 5 numbers.
+    B -> Write a plsql block to display the sum of first 5 numbers.
+    C -> Write a plsql block to print first 10 odd numbers.
+    D -> Write a plsql block to calculate the area of the circle in table with colomn sNo, radius, area and insert the area and radius into the table.
+    E -> Write a plsql block to print 1 to 10 using for loop.
+    F -> Write a plsql block to calculate the area of circle till the radius is less than 10 using for loop.
+    G -> Write a plsql block to find the factorial of a number.
+    H -> Write a plsql block to find the factorial of a number which accepted from the user.
+    I -> Write a plsql block to check whether the entered number is Palindrome or not.
+    J -> Write a plsql block to print the Fibonacci series.
+
+Date:
+Practical 4:                                                                                                    
+    A -> Write a plsql block to find the square of a number.
+    B -> Create a function to swap two numbers.
