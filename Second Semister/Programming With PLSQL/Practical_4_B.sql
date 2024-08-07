@@ -1,30 +1,19 @@
-create or replace function swap
-(num1 in out int, num2 in out int)
-return int
-is
-BEGIN
-
-    num1 := num1 + num2;
-    num2 := num1 - num2;
-    num1 := num1 - num2;
-    dbms_output.put_line('num1 = '||num1);
-    dbms_output.put_line('num2 = '||num2);
-
-END;
-
-
--- ***************************************************************************************************************
-
+-- P_4_B: write a function to find square of a numbers
 
 DECLARE
+    x1 int;
 
-    num1 int;
-    num2 int;
+function square(x1 in out int)
+return int
+is
+begin
+  x1:=x1**2;
+  return x1;
+end square;
 
 BEGIN
-
-    num1:=:Enter_number_1;
-    num2:=:Enter_number_2;
-    swap(num1, num2);
+    x1:=:Enter_the_number;
+    x1:=square(x1);
+    dbms_output.put_line('The square of the number is: '||x1);
 
 END;

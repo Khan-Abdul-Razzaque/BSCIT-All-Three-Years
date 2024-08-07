@@ -17,7 +17,7 @@ public:
     }
     void getData()
     {
-        cout << "The name of the student is " << sName << endl;
+        cout << "\nThe name of the student is " << sName << endl;
         cout << "The roll no of the student is " << sRollNo << endl;
         cout << "The class of the student is " << sClass << endl;
     }

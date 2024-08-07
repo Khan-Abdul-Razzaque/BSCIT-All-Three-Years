@@ -9,7 +9,7 @@ function root = regulafalsi(f, a, b)
         abort
     else
         while (1)
-            c(n) = ((a(n) * f(b(n))) - (b(n) * f(a(n))) / (f(b(n))) - f(a(n)))
+            c(n) = ((a(n) * f(b(n))) - (b(n) * f(a(n)))) / (f(b(n)) - f(a(n)))
 
             if (f(a(n)) * f(c(n))) < 0 then
                 b(n + 1) = c(n)

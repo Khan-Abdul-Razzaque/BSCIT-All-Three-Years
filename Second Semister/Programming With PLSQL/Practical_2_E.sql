@@ -7,10 +7,10 @@ create table Employee
 );
 
 
-insert into Employee values(1001, 15000);
+insert into Employee values(1001, 'Razzaque', 'Study', 24576);
 
 
-insert into Employee values(1002, 25000);
+insert into Employee values(1002, 'Sujeet', 'Domino', 10000);
 
 
-insert into Employee values(1003, 35000);
+insert into Employee values(1003, 'Arjun', 'Nothing', 0);

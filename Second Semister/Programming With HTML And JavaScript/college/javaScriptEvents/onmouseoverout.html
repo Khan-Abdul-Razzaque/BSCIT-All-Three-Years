@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Mouse Over</title>
+</head>
+<body;">
+    <button id="myButton" style="font-size: 200px; border-radius: 50px; border-width: 10px; margin: 300px 0px 0px 300px;">☠️Button☠️</button>
+    <script>
+        var button = document.getElementById("myButton");
+        button.onmouseover = function() {
+            button.style.backgroundColor = "green";
+            button.style.color = "red";
+        }
+        button.onmouseout = function() {
+            button.style.backgroundColor = "white";
+            button.style.color = "black";
+        }
+        button.onclick = function() {
+            alert("Kyun nahi ho rahi padhay😐");
+        }
+    </script>
+</body>
+</html>

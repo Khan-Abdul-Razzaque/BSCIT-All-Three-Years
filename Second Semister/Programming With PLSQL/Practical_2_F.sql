@@ -1,6 +1,6 @@
 DECLARE
 
-    cid int;
+    eid int;
     sal int;
 
 BEGIN

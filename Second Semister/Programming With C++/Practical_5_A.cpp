@@ -1,15 +1,9 @@
-// 12/02/2024: P_5_A: write a c++ program to design a bank structure with data members customer name, account no, type of account, balance amount in account.
-// to assign initial values.
-// to deposite an amount.
-// withdraw the amount after checking the minimum.
-// display customer details.
-
 /*
 Write a c++ program to design a bank structure with data members customer name, account no, type of account, balance amount in the account.
 to assign initial values.
 to deposit an amount.
 to withdraw the amount after checking the minimum.
-display the customer details.
+to display the customer details.
 */
 
 #include <iostream>
@@ -29,7 +23,7 @@ public:
     {
         accountNo = "981702901882";
         accountType = "saving account";
-        custName = "A.Razzaque";
+        custName = "K.A.Razzaque";
         accBalance = 500;
     }
     void deposit()
@@ -71,10 +65,7 @@ int main()
     int choice;
     while (1)
     {
-        cout << "Press 1 to deposite amount or" << endl
-             << "Press 2 to withdraw amount or" << endl
-             << "Press 3 to display the data or" << endl
-             << "Press 0 to quit the program: ";
+        cout << "Press 1 to deposite amount or\nPress 2 to withdraw amount or\nPress 3 to display the data or\nPress 0 to quit the program: ";
         cin >> choice;
         switch (choice)
         {

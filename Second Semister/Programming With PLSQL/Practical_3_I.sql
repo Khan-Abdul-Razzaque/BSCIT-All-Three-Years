@@ -7,6 +7,7 @@ DECLARE
 BEGIN
 
     palindrome:=:Enter_the_number;
+    temp := palindrome;
     while (palindrome != 0) loop
         rev := rev * 10 + mod(palindrome, 10);
         palindrome := palindrome / 10;

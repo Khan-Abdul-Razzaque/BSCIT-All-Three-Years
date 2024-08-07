@@ -9,7 +9,8 @@ class Distance
     friend int addFive(Distance);
 
 public:
-    Distance() : meter(0){}
+//  Distance() : meter(0){} // Line 12 and 13 have same meaning.
+    Distance() {meter = 0;}
 };
 
 int addFive(Distance d)

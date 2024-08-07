@@ -9,6 +9,6 @@ BEGIN
         sum1 := sum1 + i;
         i := i + 1;
     end loop;
-    dbms_output.put_line('The sum of first five natural numbers is '||sum1);
+    dbms_output.put_line('The sum of first five numbers is '||sum1);
 
 END;

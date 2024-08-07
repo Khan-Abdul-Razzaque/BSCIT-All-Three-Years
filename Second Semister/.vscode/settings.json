@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.sce": "scilab",
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}

@@ -90,7 +90,6 @@ public:
             arm += rem;
             rem = 1;
             temp /= 10;
-            cout << arm << endl;
         }
         if (arm == num)
         {
