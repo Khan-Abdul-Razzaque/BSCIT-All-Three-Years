@@ -1,12 +1,11 @@
 #include<iostream>
 using namespace std;
+
 int stack[100],n=5,top=-1;
 void push(int val)
 {
     if(top>=n-1)
-    {
         cout<<"Stack overflow"<<endl;
-    }
     else
     {
         top++;
@@ -16,9 +15,7 @@ void push(int val)
 void pop()
 {
     if(top<=-1)
-    {
         cout<<"stack underflow"<<endl;
-    }
     else{
         cout<<"the popped element is: "<<stack[top]<<endl;
         top--;
@@ -32,12 +29,9 @@ void display()
         for(int i=top;i>=0;i--)
        	cout<<stack[i]<<"\t";
         cout<<endl;
-        
     }
     else
-    {
         cout<<"stack is empty.";
-    }
 }
 int main()
 {
@@ -61,7 +55,6 @@ int main()
             }
             case 2:
             {
-
                 pop();
                 break;
             }
@@ -77,9 +70,7 @@ int main()
                 break;
             }
             default:
-            {
                 cout<<"invalid choice."<<endl;
-            }
 
         }
     } while (ch!=4);
