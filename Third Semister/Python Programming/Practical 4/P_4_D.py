@@ -6,20 +6,20 @@ Question:
         c) Update existing product
 '''
 
-ProdDict = {
+prodDict = {
     "Prod1": "A",
     "Prod2": "B",
     "Prod3": "C"
 }
 
 # For A:
-for prodKey in ProdDict:
-    print(ProdDict[prodKey])
+for prodKey in prodDict:
+    print(prodDict[prodKey])
 
 # For B:
-ProdDict["Prod4"] = "D"
-print(ProdDict)
+prodDict["Prod4"] = "D"
+print(prodDict)
 
 # For C:
-ProdDict["Prod1"] = "{{ Updated }}"
-print(ProdDict)
+prodDict["Prod1"] = "{{ Updated }}"
+print(prodDict)

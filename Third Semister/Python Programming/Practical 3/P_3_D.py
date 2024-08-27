@@ -1,6 +1,6 @@
 # Write a program to accept five numbers from the user, store those number in a list, display smallest and largest number from the list.
 
-def findsmallestAndLargest(I):
+def findSmallestAndLargest(I):
     small = large = I[0]
     for i in I:
         if i > large:
@@ -15,5 +15,5 @@ for i in range(5):
     I.append(integer)
 
 print(f"\nList: {I}")
-funcRes = findsmallestAndLargest(I)
-print(f"Latest Int: {funcRes[0]}\nSmallest Int: {funcRes[1]}\n")
+funcRes = findSmallestAndLargest(I)
+print(f"Largest Int: {funcRes[0]}\nSmallest Int: {funcRes[1]}\n")

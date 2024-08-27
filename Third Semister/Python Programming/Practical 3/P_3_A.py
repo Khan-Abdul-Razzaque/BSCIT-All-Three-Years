@@ -1,9 +1,9 @@
 # Take a list with all numbers and print all the elements from the list that are less than 5
 
-def printlessThan5(List):
+def printLessThan_5(List):
     for i in List:
         if i < 5:
             print(i)
 
 A = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-printlessThan5(A)
+printLessThan_5(A)

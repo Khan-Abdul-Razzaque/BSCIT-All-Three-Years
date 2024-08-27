@@ -1,4 +1,4 @@
-//     b: wrtie a program to search the element in the linked list and display the same also insert the node at the end of the linked list
+//!     b: wrtie a program to search the element in the linked list and display the same also insert the node at the end of the linked list
 
 #include <iostream>
 using namespace std;
@@ -19,17 +19,14 @@ int main()
     char ch = 'y';
     while (ch == 'y' || ch == 'Y')
     {
-        cout << "Enter the info for node: ";
+        cout << "Insert Info: ";
         cin >> info;
-        cout << "\nCreating New Node";
         insert_at_end(info);
-        cout << "\nNode successfull added at the end of the list";
-        cout << "\nLinked List: ";
-        display(head);
-        cout << "\n\nWant to enter more nodes? ";
+        cout << "Want to enter more nodes?(y/n): ";
         cin >> ch;
     }
-    cout << "\nEnter the element you want to search? ";
+    display(head);
+    cout << "Enter node's info to search? ";
     cin >> search;
     search_LL(search);
     return 0;
@@ -41,16 +38,12 @@ void insert_at_end(int d)
     ptr->info = d;
     ptr->next = NULL;
     if (head == NULL)
-    {
         head = ptr;
-    }
     else
     {
         Node *temp = head;
-        while (temp != NULL)
-        {
+        while (temp->next != NULL)
             temp = temp->next;
-        }
         temp->next = ptr;
     }
 }
@@ -58,19 +51,16 @@ void insert_at_end(int d)
 void search_LL(int s)
 {
     Node *temp = head;
-    while (temp->next != NULL)
+    while (temp != NULL)
     {
         if (temp->info == s)
         {
-            cout << "\nElement found in the Linked List at address " << temp << "\n\n";
+            cout << "Element found in the LL at address ==> " << temp;
             exit(0);
         }
-        else
-        {
-            temp = temp->next;
-        }
+        temp = temp->next;
     }
-    cout << "\nElement not found in the Linked List\n\n";
+    cout << "Element not found in the LL";
 }
 
 void display(Node *np)
@@ -78,7 +68,7 @@ void display(Node *np)
     while (np != NULL)
     {
         cout << np->info << "-->";
-        cout << np->next << "\t";
+        cout << np->next << " ";
         np = np->next;
     }
     cout << "\n";

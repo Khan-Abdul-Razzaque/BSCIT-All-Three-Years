@@ -1,79 +1,107 @@
+/*
+    Write a program to store elements in 1-D array and perform operations like searching, sorting and reversing the elements.
+*/
 #include <iostream>
-#include <conio.h>
 using namespace std;
+bool searchElement(int *, int);
+void sortArray(int *, int);
+void displayElements(int *, int);
+void reverseArray(int *, int);
+
 int main()
 {
-
-    int arr[50];
-    int size, i, j, temp, choice, data, counter = 0;
-    cout << "Enter array size:";
+    int size, choice;
+    cout << "Enter array size: ";
     cin >> size;
-    cout << "Enter the elements of the array:";
-    for (i = 0; i < size; i++)
+    int arr[size];
+    for (int i = 0; i < size; i++)
     {
+        cout << "Enter element " << i + 1 << ": ";
         cin >> arr[i];
     }
-    cout << "Choose the operation you want to perform on trhe array\n1.Searching\n2.Sorting\n3.Reverse\n";
+    cout << "Choose the operation you want to perform on the array\n1.Searching\n2.Sorting\n3.Reverse\nEnter choice: ";
     cin >> choice;
     switch (choice)
     {
     case 1:
-        cout << "Enter an element to search:";
-        cin >> data;
-        for (i = 0; i < size; i++)
+        if (searchElement(arr, size))
         {
-            if (arr[i] == data)
-            {
-                counter = 1;
-                break;
-            }
-        }
-        if (counter == 0)
-        {
-            cout << "Element is not found in the array";
+            cout << "Element found in the array";
         }
         else
         {
-            cout << "Element found at index position " << i << " in the array";
+            cout << "Element is not found in the array";
         }
         break;
     case 2:
-        for (i = 0; i < size; i++)
-        {
-            for (j = 0; j < size; j++)
-            {
-                if (arr[i] < arr[j])
-                {
-                    temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        cout << "\nArray after Sorting in Ascending order:";
-        for (i = 0; i < size; i++)
-        {
-            cout << arr[i] << "\t";
-        }
+        sortArray(arr, size);
+        cout << "\nArray after Sorting in Ascending order: ";
+        displayElements(arr, size);
         break;
-    case 3: // Reverse
-        i = 0;
-        j = size - 1;
-        while (i < j)
-        {
-            temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
-        }
-        cout << "Reversed array is:";
-        for (i = 0; i < size; i++)
-        {
-            cout << arr[i] << "\t";
-        }
+    case 3:
+        reverseArray(arr, size);
+        cout << "Reversed array is: ";
+        displayElements(arr, size);
+        break;
     default:
-        cout << "Please enter a choice betwen 1 to 3";
+        cout << "Invalid!, Please enter a choice b/w 1 to 3";
     }
     return 0;
+}
+
+//! Searching an element in the array.
+bool searchElement(int *array, int size)
+{
+    int data, i = 0;
+    bool found = false;
+    cout << "Enter an element to search: ";
+    cin >> data;
+    for (i = 0; i < size; i++)
+    {
+        if (array[i] == data)
+        {
+            found = true;
+            break;
+        }
+    }
+    return found;
+}
+
+//! Sorting the array.
+void sortArray(int *array, int size)
+{
+    int temp;
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+}
+
+//! Reversing the array.
+void reverseArray(int *array, int size)
+{
+    int temp;
+    for (int i = 0; i < size / 2; i++)
+    {
+        temp = array[i];
+        array[i] = array[size - (i + 1)];
+        array[size - (i + 1)] = temp;
+    }
+}
+
+//! Display the elements of the array.
+void displayElements(int *array, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << array[i] << ", ";
+    }
 }

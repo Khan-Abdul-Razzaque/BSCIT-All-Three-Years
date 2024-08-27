@@ -1,7 +1,8 @@
-// // practical 2:
-// //     Title: Linked List
-// //     A: write a program to create a single linked list and insert the nodes at the beginng and display the node elements
-
+/*
+    !practical 2:
+        !Title: Linked List
+        !A: write a program to create a single linked list and insert the nodes at the beginng and display the node elements
+*/
 #include <iostream>
 using namespace std;
 
@@ -16,19 +17,16 @@ void display(Node *);
 
 int main()
 {
-
     int info;
     char ch = 'y';
     while (ch == 'y' || ch == 'Y')
     {
-        cout << "Enter the info for node: ";
+        cout << "Insert Info: ";
         cin >> info;
         insert_at_begin(info);
-        cout << "\nNode created successfully and inserted at begining of LL.";
-        cout << "\nDo you want insert more nodes?";
+        cout << "Do you want insert more nodes?(y/n): ";
         cin >> ch;
     }
-    cout << "\nThe Lisnked List: ";
     display(start);
     return 0;
 }
@@ -46,7 +44,7 @@ void display(Node *np)
     while (np != NULL)
     {
         cout << np->info << "-->";
-        cout << np->next << "\t";
+        cout << np->next << "  ";
         np = np->next;
     }
     cout << "\n";

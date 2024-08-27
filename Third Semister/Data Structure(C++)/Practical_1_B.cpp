@@ -1,67 +1,87 @@
+/*
+    Read two array's from the user and merge them, Display the elements in sorted order.
+*/
+
 #include <iostream>
 using namespace std;
+
+void createArray(int *, int);                   // Creates an array.
+void displayArray(int *, int);                  // Display the array elements.
+void mergeArray(int *, int, int *, int, int *); // Merge two arrays.
 
 int main()
 {
     int sizeA1, sizeA2;
-    cout << "Enter the size of A1: ";
+    cout << "Enter the size of the first array: ";
     cin >> sizeA1;
-    int A1[sizeA1];
-    cout << "Enter the elements for A1.\n\n";
-    for (int i = 0; i < sizeA1; i++)
-    {
-        cout << "Enter the number " << i + 1 << " : ";
-        cin >> A1[i];
-    }
-
-    cout << "\nEnter the size of A2: ";
+    int A1[sizeA1];          // First array.
+    createArray(A1, sizeA1); // Creates the first array.
+    cout << "Enter the size of the second array: "; 
     cin >> sizeA2;
-    int A2[sizeA2];
-    cout << "Enter the elements for A2.\n\n";
-    for (int i = 0; i < sizeA2; i++)
+    int A2[sizeA2];                         // Second array.
+    createArray(A2, sizeA2);                // Creates the second array.
+    int A3[sizeA1 + sizeA2];                // Third array (new array).
+    mergeArray(A1, sizeA1, A2, sizeA2, A3); // Merge the first array and the second array in sorted order. and store it in a new array.
+    displayArray(A3, (sizeA1 + sizeA2));
+    return 0;
+}
+
+//! Creates array.
+void createArray(int *array, int size)
+{
+    cout << "* Enter elements of the array *\n\n";
+    for (int i = 0; i < size; i++)
     {
-        cout << "Enter the number " << i + 1 << " : ";
-        cin >> A2[i];
+        cout << "Enter element " << (i + 1) << " : ";
+        cin >> array[i];
     }
-    int A3[sizeA1 + sizeA2];
+}
+
+//! Merge two arrays.
+void mergeArray(int *array1, int size1, int *array2, int size2, int *mergedArray)
+{
     int i = 0, j = 0, k = 0;
-    while (i < sizeA1 && j < sizeA2)
+    while (i < size1 && j < size2)
     {
-        if (A1[i] < A2[j])
+        if (array1[i] < array2[j])
         {
-            A3[k] = A1[i];
-            i++;
+            mergedArray[k] = array1[i];
             k++;
+            i++;
         }
         else
         {
-            A3[k] = A2[j];
-            j++;
+            mergedArray[k] = array2[j];
             k++;
+            j++;
         }
     }
-    if (i >= sizeA1)
+    if (i < size1)
     {
-        while (j < sizeA2)
+        while (i < size1)
         {
-            A3[k] = A2[j];
-            j++;
+            mergedArray[k] = array1[i];
             k++;
-        }
-    }
-    else if (j >= sizeA2)
-    {
-        while (i < sizeA1)
-        {
-            A3[k] = A1[i];
             i++;
-            k++;
         }
     }
-
-    for (int i = 0; i < sizeA1 + sizeA2; i++)
+    else if (j < size2)
     {
-        cout << A3[i] << " , ";
+        while (j < size2)
+        {
+            mergedArray[k] = array2[j];
+            k++;
+            j++;
+        }
     }
-    return 0;
+}
+
+//! Display the array elements.
+void displayArray(int *array, int size)
+{
+    cout << "\nDisplaying the array:  ";
+    for (int i = 0; i < size; i++)
+    {
+        cout << array[i] << " ";
+    }
 }
