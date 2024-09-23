@@ -11,12 +11,10 @@ except FileNotFoundError:
 # Exception 2
 try:
     num1 = 10
-    num2 = 2
+    num2 = 0
     ans = num1 / num2
 except ZeroDivisionError:
     print("You can not divide by zero.")
-else:
-    print(ans)
 
 # Exception 3
 try:

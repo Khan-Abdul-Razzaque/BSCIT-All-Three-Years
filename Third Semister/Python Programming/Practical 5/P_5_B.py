@@ -2,7 +2,7 @@
 
 file = open("file.txt", "a")
 text = "\nMy name is Razzaque"
-file.writelines(text)
+file.write(text)
 file.close()
 file = open("file.txt", "r")
 fileContent = file.read()

@@ -15,7 +15,7 @@ class Student:
         print(f"The student count is {Student.stdCount}")
 
 aiman = Student("Aiman", 45, "BSc.IT")
-khan = Student("Razzaque", 23, "BSc.IT")
+razzaque = Student("Razzaque", 23, "BSc.IT")
 aiman.dispSDetail()
-khan.dispSDetail()
-khan.sCount()
+razzaque.dispSDetail()
+razzaque.sCount()

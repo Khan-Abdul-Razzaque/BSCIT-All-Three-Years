@@ -1,4 +1,4 @@
-# Q: WAP to read  the entaire content of a text file.
+# Q: WAP to read the entaire content of a text file.
 
 file = open("file.txt", "r")
 fileContent = file.read()
